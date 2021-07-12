@@ -1,8 +1,8 @@
-Vassilyev Dmitriy
+#Vassilyev Dmitriy#
 
 8 (999) 466-34-81
 lotus33497@yandex.ru
-https://github.com/lotus334
+[github](https://github.com/lotus334)
 
 
 I want to write clean code with clear architectural solutions. I consider sociability, efficiency and flexibility to be my advantages. 
@@ -15,8 +15,8 @@ I got a job in the Sсrile team as a junior full stack developer in the beginnin
 
 
 During my training, I took the following courses:
-1
-2
-3
+1 []()
+2 []()
+3 []()
 
 Now I assess my level of English as intermediate.
