@@ -1,0 +1,48 @@
+
+
+body {
+    max-width: 2550px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.header-photo {
+    display: flex;
+}
+
+.gray-background {
+    background: #4C4E50;
+    width: 100%;
+    height: calc(100% - 115px);
+}
+
+.photo-wrapper {
+    border-top: 200px solid #4C4E50;
+}
+
+.my-photo {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border: 115px solid #157698;
+    border-right: none;
+    float: right;
+}
+
+.header-info {
+    padding: 200px 100px;
+    border-bottom: 115px solid #157698;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 72px;
+    font-weight: 100;
+}
+
+.icon {
+    width: 100px;
+}
