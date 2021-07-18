@@ -1,0 +1,80 @@
+body {
+    max-width: 2550px;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.header-photo {
+    display: flex;
+}
+
+.gray-background {
+    background: #4C4E50;
+    width: 100%;
+    height: calc(100% - 80px);
+}
+
+.photo-wrapper {
+    border-top: 100px solid #4C4E50;
+}
+
+.my-photo {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border: 80px solid #157698;
+    border-right: none;
+    float: right;
+}
+
+.header-info {
+    padding: 100px 50px;
+    border-bottom: 80px solid #157698;
+    position: relative;
+}
+
+h1 {
+    font-size: 72px;
+    font-weight: lighter;
+    color: #A9A9A9;
+    margin: 0;
+}
+
+.strong-blue {
+    font-weight: bold;
+    color: #157698;
+}
+
+.cv-role {
+    color: #157698;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+    bottom: 50px;
+    position: absolute;
+    margin-top: auto;
+}
+
+.icon-phone,
+.icon-github,
+.icon-email {
+    width: 30px;
+    height: auto;
+    position: relative;
+    bottom: -9px;
+    margin-right: 40px;
+}
+
+.icon {
+    width: 100px;
+}
