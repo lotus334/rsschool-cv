@@ -5,12 +5,13 @@ body {
 }
 
 header {
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .header-photo {
     display: flex;
+    flex-grow: 1;
 }
 
 .gray-background {
@@ -21,6 +22,7 @@ header {
 
 .photo-wrapper {
     border-top: 100px solid #4C4E50;
+    margin-left: auto;  
 }
 
 .my-photo {
@@ -33,9 +35,14 @@ header {
 }
 
 .header-info {
-    padding: 100px 50px;
+    padding: 100px 50px 20px 50px;
     border-bottom: 80px solid #157698;
-    position: relative;
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+.contacts {
+    max-width: 800px;
 }
 
 h1 {
@@ -57,12 +64,12 @@ h1 {
 }
 
 .links {
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
     gap: 30px;
-    bottom: 50px;
-    position: absolute;
-    margin-top: auto;
+    margin-top: 100px;
+    list-style-type: none;
 }
 
 .icon-phone,
@@ -74,6 +81,42 @@ h1 {
     bottom: -9px;
     margin-right: 40px;
 }
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.soft-skills {
+    flex-grow: 1;
+}
+
+.soft-section {
+    max-width: 400px;
+    margin: 0 0 0 auto;
+    padding: 80px 20px 20px 20px;
+}
+
+.hard-skills {
+    flex-grow: 1;
+    background: #E1E3E5;
+}
+
+.hard-section {
+    max-width: 750px;
+    padding: 80px 20px 20px 0;
+}
+
+h3 {
+    margin: 20px 0 50px 0;
+    font-size: 30px;
+    color: #157698;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-left: 10px solid;
+    padding: 0 0 0 30px;
+}   
 
 .icon {
     width: 100px;
