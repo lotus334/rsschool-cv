@@ -1,5 +1,4 @@
 body {
-    max-width: 2550px;
     font-family: sans-serif;
     font-size: 20px;
 }
@@ -117,6 +116,12 @@ h3 {
     border-left: 10px solid;
     padding: 0 0 0 30px;
 }   
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 .icon {
     width: 100px;
