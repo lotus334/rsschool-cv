@@ -44,12 +44,14 @@ aside.menu-close {
     background-color: rgba(37,150,190, 0.3);
 }
 
-.slide-left > section {
+.slide-left section,
+.slide-left nav {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 }
 
 .slide-left h1 {
@@ -58,16 +60,33 @@ aside.menu-close {
     margin-top: -30px
 }
 
-.contacts {
+.slide-left .contacts {
     padding: 50px;
 }
 
-.contacts img {
+.slide-left .contacts img {
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
 
+}
+
+.slide-left nav .item-wrapper {
+    border: 3px solid black;
+    padding: 5px;
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.slide-left nav .item-wrapper.selected {
+    background: black;
+    color: white;
 }
 
 .slide-right > section {
@@ -99,6 +118,7 @@ aside.menu-close {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 24px;
+    letter-spacing: 0.05em;
 }
 
 .slide-right #education .item,

@@ -54,6 +54,13 @@ const changeSlideBurger = (slideIndex, action) => {
   activeSlideIndex = slideIndex;
 }
 
+const changeSelectedBurger = (activeSlideIndex) => {
+  document.querySelectorAll('.slide-left nav .item-wrapper').forEach((el) => {
+    el.classList.remove('selected');
+  });
+  document.querySelectorAll('.slide-left nav .item-wrapper')[activeSlideIndex].classList.add('selected');
+}
+
 const checkIndex = () => {
     slideRight.classList.remove('shifting');
     container.style.pointerEvents = 'visiblePainted';
@@ -65,6 +72,7 @@ const checkIndex = () => {
         slideRight.style.top = `-${slidesCount * 100}vh`;
         activeSlideIndex = slidesCount - 1;
     }
+    changeSelectedBurger(activeSlideIndex);
 }
 
 const dragStart = (evt) => {
@@ -127,7 +135,7 @@ document.querySelector('.slide-right').addEventListener('click', function() {
 })
 
 let counter = 0;
-document.querySelectorAll('.slide-left .navbar div').forEach((el) => {
+document.querySelectorAll('.slide-left nav .item-wrapper').forEach((el) => {
   let clickHandler = (el, counter) => {
     el.addEventListener('click', function() {
       changeSlideBurger(counter);
@@ -137,4 +145,4 @@ document.querySelectorAll('.slide-left .navbar div').forEach((el) => {
   counter += 1;
 })
 
-document.querySelector('.slide-left .navbar').addEventListener('transitionend', checkIndex);
+document.querySelector('.slide-left nav').addEventListener('transitionend', checkIndex);
