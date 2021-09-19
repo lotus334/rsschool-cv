@@ -12,31 +12,130 @@
 </head>
 <body>
     <div class="container">
-        <aside class="slide-left menu-close">
-            <div style="background-color: #de868e;">
-                <h1>Nature Flower</h1>
-                <p>All in pink</p>
-            </div>
-            <div style="background-color: #2c3d4e;">
-                <h1>Mountains</h1>
-                <p>With it's snow</p>
-            </div>
-            <div style="background-color: #2596be;">
-                <h1>Flying Eagle</h1>
-                <p>In the Sky</p>
-            </div>
-
+        <aside class="slide-left menu-close transition">
+            <section class="contacts">
+                <img src="images/my_photo.JPG" alt="Vassilyev">
+            </section>
+            <section class="navbar">
+                <div>Education</div>
+                <div>Professional skills</div>
+                <div>Work experience</div>
+                <div>Portfolio</div>
+            </section>
         </aside>
-        <div class="slide-right menu-close">
-            <div style="background-color: #2596be;">
-            </div>
-            <div style="background-color: #2c3d4e;"></div>
-            <div style="background-color: #de868e;">
-                asdfasdf
-            </div>
+        <div class="slide-right menu-close transition">
+            <header class="main-info transition">
+                <div class="name">
+                    <bold>Vassilyev</bold> Dmitriy
+                </div>
+                <div class="position">
+                    FullStack developer
+                </div>
+            </header>
+
+            <section id="education">
+                <div class="title-wrapper">
+                    <div class="title">
+                        Education
+                    </div>
+                </div>
+                <div class="item">
+                    <h3 class="place">
+                        Rolling Scopes School JS/FE Pre-School
+                    </h3>
+                    <h4 class="period">
+                        2020
+                    </h4>
+                    <p class="info">
+                        The training is held under the aegis of the community of professional front-end developers Rolling Scopes. 
+                        The training is dedicated to modern approaches, technologies, 
+                        and tools for developing web applications using JavaScript.
+                        <br>
+                        <a href="https://app.rs.school/certificate/mj2seb60">
+                            Certificate
+                        </a>
+                    </p>
+                </div>
+                <div class="item">
+                    <h3 class="place">
+                        6.00.1x: Introduction to Computer Science and Programming Using Python 
+                    </h3>
+                    <h4 class="period">
+                        2019
+                    </h4>
+                    <p class="info">
+                        The goal is to provide students with a brief introduction to many topics so they will have an idea 
+                        of what is possible when they need to think about how to use computation to accomplish some goal later 
+                        in their career.
+                        <br>                      
+                        <a href="https://courses.edx.org/certificates/54b7ab1f1af14e6b8048a1685bf54990">
+                            Certificate
+                        </a>
+                    </p>
+                </div>
+                
+
+            </section>
+
+            <section id="skills">
+                <div class="title-wrapper">
+                    <div class="title">
+                        Professional skills
+                    </div>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li>
+                            HTML, CSS (SCSS)
+                        </li>
+                        <li>
+                            JavaScript (jQuery)                        
+                        </li>
+                        <li>
+                            Java (Spring Boot, JDBC, jUnit 4)
+                        </li>
+                        <li>
+                            Gradle, Maven, Git
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="experience">
+                <div class="title-wrapper">
+                    <div class="title">
+                        Work experience
+                    </div>
+                </div>
+                <div class="item">
+                    <h3 class="place">
+                        Scrile
+                    </h3>
+                    <h4 class="period">
+                        2021 - now
+                    </h4>
+                    <p class="info">
+                        I got a job in the Sсrile team as a junior full stack developer in the beginning of 2020. 
+                        I use Git, HTML, CSS, JavaScript (and jQuery) at work. The server part of the pages is written in jsp. 
+                        It is a combination of java and html. The backend is respectively in java and MySQL. 
+                        I write the code in Intellij IDEA.
+                    </p>
+                </div>
+            </section>
+            <section id="portfolio">
+                <div class="title-wrapper">
+                    <div class="title">
+                        Portfolio
+                    </div>
+                </div>
+                <div class="item">
+                    <p class="info">
+                        You can find code examples on my github page.                    </p>
+                </div>
+            </section>
         </div>
 
-        <div class="buttons-action">
+        <div class="buttons-action menu-close transition">
             <button class="button-down">
                 <i class="fas fa-arrow-down"></i>
             </button>

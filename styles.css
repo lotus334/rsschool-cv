@@ -20,6 +20,12 @@ body {
     z-index: 0;
 }
 
+.transition {
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-property: width, left, transform;
+}
+
 aside.menu-close {
     --max-percent: -100%;
     transform: translate(var(--max-percent),0);
@@ -34,17 +40,16 @@ aside.menu-close {
     position: absolute;
     top: 0;
     left: 0;
-    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+    background-color: rgba(37,150,190, 0.3);
 }
 
-.slide-left > div {
-    height: 100%;
+.slide-left > section {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white;
 }
 
 .slide-left h1 {
@@ -52,6 +57,81 @@ aside.menu-close {
     margin-bottom: 10px;
     margin-top: -30px
 }
+
+.contacts {
+    padding: 50px;
+}
+
+.contacts img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+.slide-right > section {
+    background-color:rgba(37,150,190, 0.05);
+    padding: 200px 50px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.slide-right section > div {
+    max-width: 700px;
+    width: 90%;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.slide-right .title-wrapper {
+    background-color: black;
+    height: 50px;
+    display: flex;
+}
+
+.slide-right .title {
+    color: white;
+    margin: auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.slide-right #education .item,
+.slide-right #experience .item {
+    display: grid;
+}
+
+.slide-right #education .item .period,
+.slide-right #experience .item .period {
+    color: #999999;
+}
+
+.slide-right #education .item > .place, .period, .info {
+    margin: auto;
+    text-align: center;
+}
+
+.slide-right #experience .item > .place, .period, .info {
+    margin: auto;
+    text-align: center;
+}
+
+.slide-right #skills .item ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style-type: none;
+} 
+
+.slide-right #skills .item li {
+    margin: 0 auto;
+    font-size: 19px;
+} 
 
 .slide-left.shifting,
 .slide-right.shifting {
@@ -69,15 +149,43 @@ aside.menu-close {
     position: absolute;
     top: 0;
     left: 35%;
-    transition-property: width, left, transform;
     transition-duration: 0.5s;
     transition-timing-function: ease-in-out;
 }
 
-.slide-right > div {
-    height: 100%;
-    opacity: 0.5;
+.main-info {
+    position: fixed;
+    top: 0;
+    padding: 50px;
+    font-size: 48px;
+    line-height: 48px;
+    width: 65%;
+    display: grid;
+    justify-content: center;
+    transition-property: width, left, transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    background: rgba(244, 250, 252, 0.9);
+}
+
+.main-info .name bold {
+    font-weight: bold;
+    color: #242424;
+}
+
+.main-info .name {
+    font-weight: lighter;
+    color: #666666;
+}
+
+.slide-right.menu-close .main-info {
     width: 100%;
+}
+
+.main-info .position {
+    font-size: 24px;
+    font-weight: normal;
+    margin: auto;
 }
 
 .container .buttons-action button {
@@ -88,23 +196,30 @@ aside.menu-close {
 
 .container .buttons-action .button-up {
     transform: translateY(-100%);
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
 }
 
-.container .buttons-action .button-down {
-    transform: translateX(-100%);
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+.container .buttons-action button {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.buttons-action {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+}
+
+.buttons-action.menu-close {
+    left: 0;
 }
 
 button {
-    background-color: #ffffff;
     border: none;
-    color: #aaaaaa;
+    color: #ffffff;
     cursor: pointer;
     font-size: 16px;
     padding: 15px;
+    background: #666666;
 }
 
 button:hover {
