@@ -217,7 +217,7 @@ header {
     padding: 50px;
     font-size: 48px;
     line-height: 48px;
-    width: 100%;
+    width: 65%;
     display: grid;
     justify-content: center;
     transition-property: width, left, transform;
@@ -236,6 +236,10 @@ header .name {
     font-weight: lighter;
     color: #666666;
     font-size: inherit;
+}
+
+.aside-close header {
+    width: 100%;
 }
 
 header .position {
@@ -294,11 +298,16 @@ footer {
     position: fixed;
     bottom: 0;
     display: flex;
-    width: 100%;
+    width: 65%;
     justify-content: center;
     gap: 20px;
     background: rgb(244, 250, 252);
     padding-top: 5px;
+    right: 0;
+}
+
+.aside-close footer {
+    width: 100%;
 }
 
 @media screen and (max-width: 1299px) {
@@ -335,6 +344,7 @@ footer {
         padding: 15px;
         font-size: 32px;
         line-height: 32px;
+        width: 100%;
     }
 
     header .position {
