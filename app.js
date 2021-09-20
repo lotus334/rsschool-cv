@@ -122,21 +122,17 @@ buttonUp.addEventListener('click', () => changeSlide(1, ""));
 
 slideRight.addEventListener('transitionend', checkIndex);
 
-slideRight.onmousedown = dragStart;
+// slideRight.onmousedown = dragStart;
   
-slideRight.addEventListener('touchstart', dragStart);
-slideRight.addEventListener('touchend', dragEnd);
-slideRight.addEventListener('touchmove', dragAction);
+// slideRight.addEventListener('touchstart', dragStart);
+// slideRight.addEventListener('touchend', dragEnd);
+// slideRight.addEventListener('touchmove', dragAction);
 
 document.querySelector('.button-menu').addEventListener('click', function() {
-    document.querySelector('.slide-left').classList.toggle('menu-close');
-    document.querySelector('.buttons-action').classList.toggle('menu-close');
-    document.querySelector('.slide-right').classList.toggle('menu-close');
+    document.querySelector('.container').classList.toggle('aside-close')
 })
 document.querySelector('.close-wrapper').addEventListener('click', function() {
-  document.querySelector('.slide-left').classList.toggle('menu-close');
-  document.querySelector('.buttons-action').classList.toggle('menu-close');
-  document.querySelector('.slide-right').classList.toggle('menu-close');
+  document.querySelector('.container').classList.toggle('aside-close')
 })
 
 

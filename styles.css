@@ -26,7 +26,7 @@ body {
     transition-property: width, left, transform, blur;
 }
 
-aside.menu-close {
+.aside-close aside {
     --max-percent: -100%;
     transform: translate(var(--max-percent),0);
     -webkit-transform: translate(var(--max-percent),0);
@@ -195,7 +195,7 @@ aside.menu-close {
     transition: top 0.5s ease-out;
 }
 
-.slide-right.menu-close {
+.aside-close .slide-right {
     width: 100%;
     left: 0;
 }
@@ -210,9 +210,10 @@ aside.menu-close {
     transition-timing-function: ease-in-out;
 }
 
-.main-info {
+header {
     position: fixed;
     top: 0;
+    right: 0;
     padding: 50px;
     font-size: 48px;
     line-height: 48px;
@@ -222,24 +223,26 @@ aside.menu-close {
     transition-property: width, left, transform;
     transition-duration: 0.5s;
     transition-timing-function: ease-in-out;
-    background: rgba(244, 250, 252, 0.9);
+    background: rgba(244,250,252,255);
+    z-index: 1;
 }
 
-.main-info .name bold {
+header .name bold {
     font-weight: bold;
     color: #242424;
 }
 
-.main-info .name {
+header .name {
     font-weight: lighter;
     color: #666666;
+    font-size: inherit;
 }
 
-.slide-right.menu-close .main-info {
+.aside-close header {
     width: 100%;
 }
 
-.main-info .position {
+header .position {
     font-size: 24px;
     font-weight: normal;
     margin: auto;
@@ -270,7 +273,7 @@ aside.menu-close {
     top: 55%;
 }
 
-.buttons-action.menu-close {
+.aside-close .buttons-action {
     left: 0;
 }
 
@@ -313,7 +316,7 @@ button:focus {
         left: 0;
         width: 100%;
     }
-    .slide-right .main-info {
+    .slide-right header {
         width: 100%;
     }
     .buttons-action {
@@ -322,13 +325,13 @@ button:focus {
 }
 
 @media screen and (max-width: 499px) {
-    .main-info {
+    header {
         padding: 15px;
         font-size: 32px;
         line-height: 32px;
     }
 
-    .main-info .position {
+    header .position {
         font-size: 22px;
         line-height: 36px;
     }

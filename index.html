@@ -9,15 +9,23 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Vertical slider</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
-    <div class="container">
-        <aside class="slide-left menu-close transition">
-            <section class="image-wrapper">
+    <div class="container aside-close">
+        <aside class="slide-left transition">
+            <figure class="image-wrapper">
                 <img src="images/my_photo.JPG" alt="Vassilyev">
-            </section>
+            </figure>
             <nav>
                 <div class="item-wrapper selected">
+                    <div class="item">
+                        About me
+                    </div>
+                </div>
+                <div class="item-wrapper">
                     <div class="item">
                         Education
                     </div>
@@ -54,21 +62,50 @@
                 </div>
             </nav>
         </aside>
-        <div class="slide-right menu-close transition">
-            <header class="main-info transition">
-                <div class="name">
-                    <bold>Vassilyev</bold> Dmitriy
-                </div>
-                <div class="position">
-                    FullStack developer
-                </div>
-            </header>
 
+        <header class="transition">
+            <h1 class="name">
+                <strong>Vassilyev</strong> Dmitriy
+            </h1>
+            <h2 class="position">
+                FullStack developer
+            </h2>
+        </header>
+
+        <main class="slide-right transition">
+            <section id="profile">
+                <div class="title-wrapper">
+                    <h2 class="title">
+                        About me
+                    </h2>
+                </div>
+                <div class="item">
+                    <p class="info">
+                        I want to write clean code with clear architectural solutions. I consider sociability,
+                        efficiency and flexibility to be my advantages.
+                    </p>
+                </div>
+                <div class="item">
+                    This is example of my code:
+                    <pre>
+                        <code class="JavaScript">
+                            console.log('Hello world!');
+                        </code>
+                    </pre>
+                </div>
+                <div class="item">
+                    That's my school project:
+                    <br>
+                    <a href="https://rolling-scopes-school.github.io/lotus334-JSFEPRESCHOOL/vertical-slider/">
+                        <img src="images/my_project.png" alt="" width="200px">
+                    </a>
+                </div>
+            </section>
             <section id="education">
                 <div class="title-wrapper">
-                    <div class="title">
+                    <h2 class="title">
                         Education
-                    </div>
+                    </h2>
                 </div>
                 <div class="item">
                     <h3 class="place">
@@ -110,9 +147,9 @@
 
             <section id="skills">
                 <div class="title-wrapper">
-                    <div class="title">
+                    <h2 class="title">
                         Professional skills
-                    </div>
+                    </h2>
                 </div>
                 <div class="item">
                     <ul>
@@ -134,9 +171,9 @@
 
             <section id="experience">
                 <div class="title-wrapper">
-                    <div class="title">
+                    <h2 class="title">
                         Work experience
-                    </div>
+                    </h2>
                 </div>
                 <div class="item">
                     <h3 class="place">
@@ -155,9 +192,9 @@
             </section>
             <section id="portfolio">
                 <div class="title-wrapper">
-                    <div class="title">
+                    <h2 class="title">
                         Portfolio
-                    </div>
+                    </h2>
                 </div>
                 <div class="item">
                     <p class="info">
@@ -167,9 +204,9 @@
             </section>
             <section id="english">
                 <div class="title-wrapper">
-                    <div class="title">
+                    <h2 class="title">
                         English level
-                    </div>
+                    </h2>
                 </div>
                 <div class="item">
                     <p class="info">
@@ -180,9 +217,9 @@
             </section>
             <section id="contacts">
                 <div class="title-wrapper">
-                    <div class="title">
+                    <h2 class="title">
                         Contacts
-                    </div>
+                    </h2>
                 </div>
                 <div class="item">
                     <ul>
@@ -201,9 +238,9 @@
                         </ul>
                 </div>
             </section>
-        </div>
+        </main>
 
-        <div class="buttons-action menu-close transition">
+        <div class="buttons-action transition">
             <button class="button-down">
                 <i class="fas fa-arrow-down"></i>
             </button>
