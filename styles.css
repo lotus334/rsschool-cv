@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap");
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+
+.transition {
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-property: width, left, transform, blur;
+}
+
+aside.menu-close {
+    --max-percent: -100%;
+    transform: translate(var(--max-percent),0);
+    -webkit-transform: translate(var(--max-percent),0);
+    -o-transform: translate(var(--max-percent),0);
+    -moz-transform: translate(var(--max-percent),0);
+}
+
+.slide-left {
+    height: 100vh;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: rgba(189,223,235,255);
+    overflow: scroll;
+    scrollbar-width: none;
+    padding: 20px;
+}
+
+.slide-left section,
+.slide-left nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.slide-left h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -30px
+}
+
+.slide-left .image-wrapper {
+    padding: 50px;
+}
+
+.slide-left .image-wrapper img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+.slide-left nav .item-wrapper,
+.slide-left nav .close-wrapper {
+    border: 3px solid black;
+    padding: 5px;
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.slide-left nav .close-wrapper {
+    background: #666666;
+    color: white;
+}
+
+.slide-left nav .close-wrapper {
+    border: 3px solid black;
+    padding: 5px;
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.slide-left nav .item-wrapper.selected {
+    background: black;
+    color: white;
+}
+
+
+.slide-right > section {
+    background-color:rgba(37,150,190, 0.05);
+    padding: 200px 50px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+.slide-right section > div {
+    max-width: 700px;
+    width: 90%;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.slide-right .title-wrapper {
+    background-color: black;
+    display: flex;
+}
+
+.slide-right .title {
+    color: white;
+    margin: auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    padding: 10px;
+}
+
+.slide-right #education .item,
+.slide-right #experience .item {
+    display: grid;
+}
+
+.slide-right #education .item .period,
+.slide-right #experience .item .period {
+    color: #999999;
+}
+
+.slide-right #education .item > .place, .period,
+.slide-right #experience .item > .place, .period {
+    margin: auto;
+    text-align: center;
+}
+
+.slide-right #education .item > .info {
+    text-align: justify;
+}
+
+.slide-right #education .item .info a {
+    font-weight: bold;
+    color: black;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 36px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+
+.slide-right #skills .item ul,
+.slide-right #contacts .item ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style-type: none;
+} 
+
+.slide-right #skills .item li,
+.slide-right #contacts .item li {
+    margin: 0 auto;
+    font-size: 19px;
+} 
+
+.slide-left.shifting,
+.slide-right.shifting {
+    transition: top 0.5s ease-out;
+}
+
+.slide-right.menu-close {
+    width: 100%;
+    left: 0;
+}
+
+.slide-right {
+    height: 100vh;
+    width: 65%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.main-info {
+    position: fixed;
+    top: 0;
+    padding: 50px;
+    font-size: 48px;
+    line-height: 48px;
+    width: 65%;
+    display: grid;
+    justify-content: center;
+    transition-property: width, left, transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    background: rgba(244, 250, 252, 0.9);
+}
+
+.main-info .name bold {
+    font-weight: bold;
+    color: #242424;
+}
+
+.main-info .name {
+    font-weight: lighter;
+    color: #666666;
+}
+
+.slide-right.menu-close .main-info {
+    width: 100%;
+}
+
+.main-info .position {
+    font-size: 24px;
+    font-weight: normal;
+    margin: auto;
+}
+
+.container .buttons-action button {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+}
+
+.container .buttons-action .button-up {
+    transform: translateY(-100%);
+}
+
+.container .buttons-action .button-menu {
+    transform: translateY(-250%);
+}
+
+.container .buttons-action button {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.buttons-action {
+    position: absolute;
+    left: 35%;
+    top: 55%;
+}
+
+.buttons-action.menu-close {
+    left: 0;
+}
+
+button {
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px;
+    background: #666666;
+}
+
+button:hover {
+    color: #222222;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+@media screen and (max-width: 1299px) {
+    .slide-right section > div {
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .slide-right section > div {
+        max-width: 350px;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .slide-left {
+        width: 100%;
+        z-index: 1;
+    }
+    .slide-right {
+        left: 0;
+        width: 100%;
+    }
+    .slide-right .main-info {
+        width: 100%;
+    }
+    .buttons-action {
+        top: 75%;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .main-info {
+        padding: 15px;
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .main-info .position {
+        font-size: 22px;
+        line-height: 36px;
+    }
+
+    .slide-right > section {
+        padding: 100px 35px 35px 35px;
+    }
+
+    button {
+        padding: 10px;
+    }
+}
