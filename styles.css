@@ -23,7 +23,7 @@ body {
 .transition {
     transition-duration: 0.5s;
     transition-timing-function: ease-in-out;
-    transition-property: width, left, transform;
+    transition-property: width, left, transform, blur;
 }
 
 aside.menu-close {
@@ -41,7 +41,10 @@ aside.menu-close {
     top: 0;
     left: 0;
     overflow: hidden;
-    background-color: rgba(37,150,190, 0.3);
+    background-color: rgba(189,223,235,255);
+    overflow: scroll;
+    scrollbar-width: none;
+    padding: 20px;
 }
 
 .slide-left section,
@@ -60,11 +63,11 @@ aside.menu-close {
     margin-top: -30px
 }
 
-.slide-left .contacts {
+.slide-left .image-wrapper {
     padding: 50px;
 }
 
-.slide-left .contacts img {
+.slide-left .image-wrapper img {
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -72,7 +75,25 @@ aside.menu-close {
 
 }
 
-.slide-left nav .item-wrapper {
+.slide-left nav .item-wrapper,
+.slide-left nav .close-wrapper {
+    border: 3px solid black;
+    padding: 5px;
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.slide-left nav .close-wrapper {
+    background: #666666;
+    color: white;
+}
+
+.slide-left nav .close-wrapper {
     border: 3px solid black;
     padding: 5px;
     width: 90%;
@@ -89,6 +110,7 @@ aside.menu-close {
     color: white;
 }
 
+
 .slide-right > section {
     background-color:rgba(37,150,190, 0.05);
     padding: 200px 50px;
@@ -97,6 +119,8 @@ aside.menu-close {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    overflow: scroll;
+    scrollbar-width: none;
 }
 
 .slide-right section > div {
@@ -108,7 +132,6 @@ aside.menu-close {
 
 .slide-right .title-wrapper {
     background-color: black;
-    height: 50px;
     display: flex;
 }
 
@@ -119,6 +142,7 @@ aside.menu-close {
     font-weight: bold;
     font-size: 24px;
     letter-spacing: 0.05em;
+    padding: 10px;
 }
 
 .slide-right #education .item,
@@ -131,24 +155,37 @@ aside.menu-close {
     color: #999999;
 }
 
-.slide-right #education .item > .place, .period, .info {
+.slide-right #education .item > .place, .period,
+.slide-right #experience .item > .place, .period {
     margin: auto;
     text-align: center;
 }
 
-.slide-right #experience .item > .place, .period, .info {
-    margin: auto;
-    text-align: center;
+.slide-right #education .item > .info {
+    text-align: justify;
 }
 
-.slide-right #skills .item ul {
+.slide-right #education .item .info a {
+    font-weight: bold;
+    color: black;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 36px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+
+.slide-right #skills .item ul,
+.slide-right #contacts .item ul {
     display: flex;
     flex-direction: column;
     gap: 15px;
     list-style-type: none;
 } 
 
-.slide-right #skills .item li {
+.slide-right #skills .item li,
+.slide-right #contacts .item li {
     margin: 0 auto;
     font-size: 19px;
 } 
@@ -218,6 +255,10 @@ aside.menu-close {
     transform: translateY(-100%);
 }
 
+.container .buttons-action .button-menu {
+    transform: translateY(-250%);
+}
+
 .container .buttons-action button {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -226,7 +267,7 @@ aside.menu-close {
 .buttons-action {
     position: absolute;
     left: 35%;
-    top: 50%;
+    top: 55%;
 }
 
 .buttons-action.menu-close {
@@ -248,4 +289,55 @@ button:hover {
 
 button:focus {
     outline: none;
+}
+
+
+@media screen and (max-width: 1299px) {
+    .slide-right section > div {
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .slide-right section > div {
+        max-width: 350px;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .slide-left {
+        width: 100%;
+        z-index: 1;
+    }
+    .slide-right {
+        left: 0;
+        width: 100%;
+    }
+    .slide-right .main-info {
+        width: 100%;
+    }
+    .buttons-action {
+        top: 75%;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .main-info {
+        padding: 15px;
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .main-info .position {
+        font-size: 22px;
+        line-height: 36px;
+    }
+
+    .slide-right > section {
+        padding: 100px 35px 35px 35px;
+    }
+
+    button {
+        padding: 10px;
+    }
 }
