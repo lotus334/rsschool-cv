@@ -217,7 +217,7 @@ header {
     padding: 50px;
     font-size: 48px;
     line-height: 48px;
-    width: 65%;
+    width: 100%;
     display: grid;
     justify-content: center;
     transition-property: width, left, transform;
@@ -236,10 +236,6 @@ header .name {
     font-weight: lighter;
     color: #666666;
     font-size: inherit;
-}
-
-.aside-close header {
-    width: 100%;
 }
 
 header .position {
@@ -294,6 +290,16 @@ button:focus {
     outline: none;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+    background: rgb(244, 250, 252);
+    padding-top: 5px;
+}
 
 @media screen and (max-width: 1299px) {
     .slide-right section > div {
@@ -310,7 +316,7 @@ button:focus {
 @media screen and (max-width: 799px) {
     .slide-left {
         width: 100%;
-        z-index: 1;
+        z-index: 2;
     }
     .slide-right {
         left: 0;
